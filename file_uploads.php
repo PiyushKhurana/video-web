@@ -17,7 +17,7 @@
 
 
         
-            $maxsize = 52428800; // 5MB
+            $maxsize = 52428800; 
                        
             $name = $_FILES['file1']['name'];
             $target_dir = "videos/";
