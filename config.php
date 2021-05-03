@@ -3,10 +3,8 @@ require __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
-echo var_dump($_ENV);
-
 $host     =  $_ENV['HOST'];  /* Host name */
-$user     =  $_ENV['USER'];      /* User */
+$user     =  $_ENV['DBUSER'];      /* User */
 $password =  $_ENV['PASSWORD'];        /* Password */
 $dbname   =  $_ENV['DBNAME'];  /* Database name */
 
