@@ -6,9 +6,13 @@
 
         
         require 'vendor/autoload.php';
+
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->safeLoad();
+
         $ffmpeg = FFMpeg\FFMpeg::create(array(
-            'ffmpeg.binaries'  => 'F:\GOOGLE CHROME DOWNLOADS\ffmpeg-4.4-essentials_build\ffmpeg-4.4-essentials_build\bin\ffmpeg.exe',
-            'ffprobe.binaries' => 'F:\GOOGLE CHROME DOWNLOADS\ffmpeg-4.4-essentials_build\ffmpeg-4.4-essentials_build\bin\ffprobe.exe',
+            'ffmpeg.binaries'  => $_ENV['FFMPEG_BIN_PATH'],
+            'ffprobe.binaries' => $_ENV['FFPROBE_BIN_PATH'],
             'timeout'          => 3600, // The timeout for the underlying process
             'ffmpeg.threads'   => 12,   // The number of threads that FFMpeg should use
         ), $logger);
