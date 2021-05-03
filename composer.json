@@ -1,5 +1,6 @@
 {
     "require": {
-        "php-ffmpeg/php-ffmpeg": "^0.18.0"
+        "php-ffmpeg/php-ffmpeg": "^0.18.0",
+        "vlucas/phpdotenv": "^5.3"
     }
 }
