@@ -1,3 +1,6 @@
 vendor/
 *.mp4
 *.webm
+*.jpg
+*.gif
+!loader.gif
