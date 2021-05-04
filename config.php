@@ -6,7 +6,7 @@ $dotenv->safeLoad();
 $host     =  $_ENV['HOST'];  /* Host name */
 $user     =  $_ENV['DBUSER'];      /* User */
 $password =  $_ENV['PASSWORD'];        /* Password */
-$dbname   =  $_ENV['DBNAME'];  /* Database name */
+$dbname   =  'crondbv1';  /* Database name */
 
 // Create connection
 $con = mysqli_connect($host, $user, $password,$dbname);
