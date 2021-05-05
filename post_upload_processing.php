@@ -56,9 +56,9 @@ require 'vendor/autoload.php';
                 ->save(new FFMpeg\Format\Video\WebM(), "{$target_file_webm}.webm");
 
 
-                $thumbnail=$target_file_thumbs.".jpg";
-                $preview=$target_file_gifs.".gif";
-                $location_webm=$target_file_webm.".webm";
+                $thumbnail      = "thumbs/" .$name. ".jpg";
+                $preview        = "gifs/"   .$name. ".gif";
+                $location_webm  = "webm/"   .$name. ".webm";
 
                 
 
