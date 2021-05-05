@@ -15,7 +15,7 @@ require 'vendor/autoload.php';
         ), $logger);
 
 
-        $fetchVideos = mysqli_query($con, "SELECT * FROM videos Where isModified = 1 ");
+        $fetchVideos = mysqli_query($con, "SELECT * FROM videos Where isModified = 1 order by updated asc ");
         while($row = mysqli_fetch_assoc($fetchVideos)){
             $id=$row['id'];
             $name=$row['name'];

@@ -15,7 +15,7 @@ require 'vendor/autoload.php';
         ), $logger);
 
 
-        $fetchVideos = mysqli_query($con, "SELECT * FROM videos Where isProcessed = 0 ");
+        $fetchVideos = mysqli_query($con, "SELECT * FROM videos Where isProcessed = 0 order by created asc ");
         while($row = mysqli_fetch_assoc($fetchVideos)){
             $id=$row['id'];
             $name=$row['name'];
