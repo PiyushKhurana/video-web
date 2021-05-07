@@ -22,7 +22,7 @@
         
         mysqli_query($con,$query);
 
-        header("Location: /watch.php");
+        header("Location: rtcamp/watch.php");
         die();
         
 
