@@ -64,10 +64,15 @@ require 'vendor/autoload.php';
 
                 $query = "UPDATE videos set thumbnail='$thumbnail', preview='$preview', location_webm='$location_webm' , isProcessed=1 where id='$id'";
                 mysqli_query($con,$query);
+
+                $datestamp=date('Y-m-d H:i:s');
+		        echo "Successfuly Processed Uploaded video  at ".$datestamp;
                
                 
 
            
         }
+    
+    echo "Successfully executed cron job at ".date('Y-m-d H:i:s');
 
 ?>

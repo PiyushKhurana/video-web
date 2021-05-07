@@ -88,10 +88,16 @@ require 'vendor/autoload.php';
 
                 $query = "UPDATE videos set isModified=0 , watermark='' , rotate=0  where id='$id'";
                 mysqli_query($con,$query);
+
+                $datestamp=date('Y-m-d H:i:s');
+               	echo "Successfully Proceessed Video  at  ".$datestamp;
                
                 
 
            
         }
+
+        $datestamp=date('Y-m-d H:i:s');
+        echo "Successfuly executed cron job at ".$datestamp;
 
 ?>
