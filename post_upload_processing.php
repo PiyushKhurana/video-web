@@ -22,7 +22,7 @@ require 'vendor/autoload.php';
             $path_mp4=$row['location_mp4'];
 
 
-            $extra="/var/www/html/";
+            $extra="C://xampp//htdocs//rtcamp//";
             $video = $ffmpeg->open($extra.$path_mp4);
 
 

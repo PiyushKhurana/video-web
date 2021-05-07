@@ -25,7 +25,7 @@ require 'vendor/autoload.php';
             $rotate_value=$row['rotate'];
 
 
-            $extra="/var/www/html/";
+            $extra="C://xampp//htdocs//rtcamp//";
 
             //$video = $ffmpeg->open($extra.$path_mp4);
 
@@ -66,7 +66,7 @@ require 'vendor/autoload.php';
   
                   $video = $ffmpeg->open($extra.$path_mp4);
   
-                  $command = "text='$watermark_text': fontfile='/var/www/html/Open_Sans/OpenSans-Regular.ttf': fontcolor=red: fontsize=80: box=1: boxcolor=black@0.5: boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/2:";
+                  $command = "text='$watermark_text': fontfile='OpenSans-Regular.ttf': fontcolor=red: fontsize=80: box=1: boxcolor=black@0.5: boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/2:";
                   $video->filters()->custom("drawtext=$command");
                   
                   $video->save(new FFMpeg\Format\Video\X264(), $path_new);
