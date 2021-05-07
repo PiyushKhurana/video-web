@@ -25,7 +25,7 @@ require 'vendor/autoload.php';
             $rotate_value=$row['rotate'];
 
 
-            $extra="C://xampp//htdocs//rtcamp//";
+            $extra="/var/www/html/";
 
             //$video = $ffmpeg->open($extra.$path_mp4);
 
