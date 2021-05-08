@@ -77,15 +77,17 @@
                 echo "<div>";
                 echo "<div id='headd'>";
     
-                    echo "<h3 class='txt'>$name</h3>";
+                    echo "<h3 class='txt'>Video Title : $name</h3>";
                     echo "<a class='edit' href='edit.php?id=".$id."'>Edit Video</a>";
     
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
+                echo "<h3>$name.mp4</h3>";
                 echo "<video width='320' height='240' autoplay muted><source src='".$random_path."' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
+                echo "<h3>$name.webm</h3>";
                 echo "<video width='320' height='240' autoplay muted><source src='".$path_webm."' type='video/mp4'></video>";
                 echo "</div>";
                     
