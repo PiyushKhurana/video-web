@@ -23,6 +23,7 @@
             return document.getElementById(el);
         }
         function uploadFile() {
+            document.getElementById("loader").style.display = "block";
             var file = _("file1").files[0];
             // alert(file.name+" | "+file.size+" | "+file.type);
             var formdata = new FormData();
@@ -36,7 +37,9 @@
             ajax.send(formdata);
         }
         function progressHandler(event) {
-            _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
+            var x=Math.trunc(event.loaded/1048576)
+            var y=Math.trunc(event.total/1048576)
+            _("loaded_n_total").innerHTML = "Uploaded " + x + " MB of " + y+" MB";
             var percent = (event.loaded / event.total) * 100;
             _("progressBar").value = Math.round(percent);
             _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
@@ -44,6 +47,7 @@
         function completeHandler(event) {
             _("status").innerHTML = event.target.responseText;
             _("progressBar").value = 0;
+            document.getElementById("loader").style.display = "none";
         }
         function errorHandler(event) {
             _("status").innerHTML = "Upload Failed";
@@ -78,6 +82,10 @@
                 <h3 id="status"></h3>
                 <p id="loaded_n_total"></p>
             </form>
+
+            <div>
+                <img src="Upload.gif" id="loader" style="display: none;"/>
+            </div>
 
         </div>
     </div>

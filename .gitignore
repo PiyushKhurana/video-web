@@ -5,4 +5,5 @@ vendor/
 *.gif
 !loader.gif
 !spinner.gif
+!Upload.gif
 .env
