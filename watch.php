@@ -84,11 +84,11 @@
                 echo "<div >";
                 echo "<div id='row'>";
                 echo "<h3>$name.mp4</h3>";
-                echo "<video width='320' height='240' autoplay muted><source src='".$random_path."' type='video/mp4'></video>";
+                echo "<video width='320' height='240' autoplay muted controls ><source src='".$random_path."' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>$name.webm</h3>";
-                echo "<video width='320' height='240' autoplay muted><source src='".$path_webm."' type='video/mp4'></video>";
+                echo "<video width='320' height='240' autoplay muted controls ><source src='".$path_webm."' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
