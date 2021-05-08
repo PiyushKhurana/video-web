@@ -85,7 +85,7 @@
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>$name.webm</h3>";
-                echo "<video width='320' height='240'  poster='loader1.gif'><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240'  poster='encoding.gif'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
@@ -107,11 +107,11 @@
                 echo "<div >";
                 echo "<div id='row'>";
                 echo "<h3>$name.mp4</h3>";
-                echo "<video width='320' height='240'  poster='loader1.gif'><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240'  poster='apply.gif'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>$name.webm</h3>";
-                echo "<video width='320' height='240'  poster='loader1.gif'><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240'  poster='encoding.gif'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
@@ -166,7 +166,7 @@
                 echo "<div >";
                 echo "<div id='row'>";
                 echo "<h3>$name.mp4</h3>";
-                echo "<video width='320' height='240'  poster='loader1.gif'><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240'  poster='apply.gif'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>$name.webm</h3>";
