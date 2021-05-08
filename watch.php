@@ -62,11 +62,65 @@
             $isProcessed=$row['isProcessed'];
             $isModified=$row['isModified'];
 
-            //processed and modified both done
-            if($isProcessed==1 && $isModified==0){
+        
+           if($isProcessed==0&&$isModified==0){
+
+            $name=$row['name'];
+                $path_mp4=$row['location_mp4'];
+                $num = mt_rand(100000,999999); 
+                $random_path=$path_mp4."?time".$num;
+    
+    
+                echo "<div>";
+                echo "<div id='headd'>";
+    
+                    echo "<h3 class='txt'>Video Title : $name</h3>";
+                    echo "<a class='edit' href='edit.php?id=".$id."'>Edit Video</a>";
+    
+                echo "</div>";
+                echo "<div >";
+                echo "<div id='row'>";
+                echo "<h3>$name.mp4</h3>";
+                echo "<video width='320' height='240' autoplay muted controls ><source src='".$random_path."' type='video/mp4'></video>";
+                echo "</div>";
+                echo "<div id='row'>";
+                echo "<h3>$name.webm</h3>";
+                echo "<video width='320' height='240'  poster='loader1.gif'><source src='' type='video/mp4'></video>";
+                echo "</div>";
+                    
+                echo "</div>";
+           echo "</div>";
+
+           }elseif($isProcessed==0&&$isModified==1){
 
 
-                $name=$row['name'];
+            $name=$row['name'];
+    
+    
+                echo "<div>";
+                echo "<div id='headd'>";
+    
+                    echo "<h3 class='txt'>Video Title : $name</h3>";
+                    echo "<a class='edit' href='edit.php?id=".$id."'>Edit Video</a>";
+    
+                echo "</div>";
+                echo "<div >";
+                echo "<div id='row'>";
+                echo "<h3>$name.mp4</h3>";
+                echo "<video width='320' height='240'  poster='loader1.gif'><source src='' type='video/mp4'></video>";
+                echo "</div>";
+                echo "<div id='row'>";
+                echo "<h3>$name.webm</h3>";
+                echo "<video width='320' height='240'  poster='loader1.gif'><source src='' type='video/mp4'></video>";
+                echo "</div>";
+                    
+                echo "</div>";
+           echo "</div>";
+
+
+           }elseif($isProcessed==1&&$isModified==0){
+
+            $name=$row['name'];
                 $path_mp4=$row['location_mp4'];
                 $path_webm=$row['location_webm'];
                 $path_gif=$row['preview'];
@@ -94,23 +148,36 @@
                     
                 echo "</div>";
            echo "</div>";
+
+           }else {
+               
+            $name=$row['name'];
+                $path_webm=$row['location_webm'];
+            
     
+    
+                echo "<div>";
+                echo "<div id='headd'>";
+    
+                    echo "<h3 class='txt'>Video Title : $name</h3>";
+                    echo "<a class='edit' href='edit.php?id=".$id."'>Edit Video</a>";
+    
+                echo "</div>";
+                echo "<div >";
+                echo "<div id='row'>";
+                echo "<h3>$name.mp4</h3>";
+                echo "<video width='320' height='240'  poster='loader1.gif'><source src='' type='video/mp4'></video>";
+                echo "</div>";
+                echo "<div id='row'>";
+                echo "<h3>$name.webm</h3>";
+                echo "<video width='320' height='240' autoplay muted controls ><source src='".$path_webm."' type='video/mp4'></video>";
+                echo "</div>";
+                    
+                echo "</div>";
+           echo "</div>";
 
 
-            }
-
-            // // processed only and  modification to be done 
-            // elseif($isProcessed==1 && $isModified==1){
-
-            // }
-
-            // // not processed yet
-            // else {
-
-            // }
-
-
-           
+           }
 
         }
         ?>
