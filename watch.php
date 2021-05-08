@@ -80,12 +80,16 @@
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
-                echo "<h3>$name.mp4</h3>";
+                echo "<h3>MP4 Format</h3>";
                 echo "<video width='320' height='240' autoplay muted controls ><source src='".$random_path."' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
-                echo "<h3>$name.webm</h3>";
-                echo "<video width='320' height='240'  poster='encoding.gif'><source src='' type='video/mp4'></video>";
+                echo "<h3>WEBM Format</h3>";
+                echo "<video width='320' height='240'  poster='Spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
+                echo "</div>";
+                echo "<div id='row'>";
+                echo "<h3>GIF Format</h3>";
+                echo "<video width='320' height='240' poster='Spinner.gif' style=' object-fit:none;' ><source src='' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
@@ -106,12 +110,16 @@
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
-                echo "<h3>$name.mp4</h3>";
-                echo "<video width='320' height='240'  poster='apply.gif'><source src='' type='video/mp4'></video>";
+                echo "<h3>MP4 Format</h3>";
+                echo "<video width='320' height='240'  poster='Spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
-                echo "<h3>$name.webm</h3>";
-                echo "<video width='320' height='240'  poster='encoding.gif'><source src='' type='video/mp4'></video>";
+                echo "<h3>WEBM Format</h3>";
+                echo "<video width='320' height='240'  poster='Spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
+                echo "</div>";
+                echo "<div id='row'>";
+                echo "<h3>GIF Format</h3>";
+                echo "<video width='320' height='240' poster='Spinner.gif' style=' object-fit:none;' ><source src='' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
@@ -138,12 +146,16 @@
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
-                echo "<h3>$name.mp4</h3>";
+                echo "<h3>MP4 Format</h3>";
                 echo "<video width='320' height='240' autoplay muted controls ><source src='".$random_path."' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
-                echo "<h3>$name.webm</h3>";
+                echo "<h3>WEBM Format</h3>";
                 echo "<video width='320' height='240' autoplay muted controls ><source src='".$path_webm."' type='video/mp4'></video>";
+                echo "</div>";
+                echo "<div id='row'>";
+                echo "<h3>GIF Format</h3>";
+                echo "<video width='320' height='240' poster='".$path_gif."' ><source src='' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
@@ -153,7 +165,7 @@
                
             $name=$row['name'];
                 $path_webm=$row['location_webm'];
-            
+                $path_gif=$row['preview'];
     
     
                 echo "<div>";
@@ -165,12 +177,16 @@
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
-                echo "<h3>$name.mp4</h3>";
-                echo "<video width='320' height='240'  poster='apply.gif'><source src='' type='video/mp4'></video>";
+                echo "<h3>MP4 Format</h3>";
+                echo "<video width='320' height='240'  poster='Spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
-                echo "<h3>$name.webm</h3>";
+                echo "<h3>WEBM Format</h3>";
                 echo "<video width='320' height='240' autoplay muted controls ><source src='".$path_webm."' type='video/mp4'></video>";
+                echo "</div>";
+                echo "<div id='row'>";
+                echo "<h3>GIF Format</h3>";
+                echo "<video width='320' height='240' poster='".$path_gif."' ><source src='' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
