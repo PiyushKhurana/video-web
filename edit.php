@@ -31,18 +31,18 @@ $random_path=$path_mp4."?time".$num;
     <title>Edit Videos</title>
     <style>
         #main {
-            margin: 40px;
+            
         }
 
         .txt {
-            font-family: Sans-serif;
+            font-family: cursive;
         }
         #role{
             /* border: 3px;
             border-style: solid; */
-            margin-top: 20px;
-            margin-right: 80px;
-            margin-left: 80px;
+             margin-top: 20px;
+            /*margin-right: 80px;
+            margin-left: 80px; */
             text-align: center;
         }
         #player{
@@ -57,6 +57,9 @@ $random_path=$path_mp4."?time".$num;
             /* border: 3px;
             border-style: solid; */
             text-align: center;
+            background-color:#f55c47;
+            padding: 10px 10px 10px 10px;
+            color:#ffffff;
             
 
         }
@@ -101,18 +104,18 @@ $random_path=$path_mp4."?time".$num;
                                 <a  href="index.html">Home</a>
                                 <a href="upload.html">Upload</a>
                                 <a href="watch.php">Watch</a>
-                                <a href="#about">About</a>
+                                <a href="https://github.com/PiyushKhurana">Author</a>
                             </div>
 
                             <div id="main">
 
-                                <div>
+                                <div style="background-color:#ff971d;padding: 10px 10px 10px 10px;color:#ffffff;">
                                     <h1 class="txt">Video Encoding Challenge - RT Camp</h1>
                                 </div>
 
 
-                                <div id="role">
-                                    <h3 class="txt">Video Editor</h1>
+                                <div id="role" style="background-color:#ff7b54;padding: 10px 10px 10px 10px;color:#ffffff;">
+                                    <h2 class="txt" style="color:#ffffff;">Video Editor</h2>
                                 </div>
 
 
@@ -123,7 +126,7 @@ $random_path=$path_mp4."?time".$num;
                                     </video>
                                 </div>
 
-                                <div id="adv">
+                                <div id="adv" style="color:#ffffff;font-weight:bold;">
                                                 
                                     <form id="myform" action='<?php echo "changes.php/?id=".$val;?>' method="post">
                                     <label for="watermark">Watermark:</label>

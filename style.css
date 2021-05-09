@@ -1,3 +1,8 @@
+body{
+  background-color:#f9f6f7;
+  font-family: cursive;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
@@ -22,6 +27,6 @@
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #ff971d;
     color: white;
   }

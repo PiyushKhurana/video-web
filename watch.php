@@ -19,25 +19,38 @@
         }
 
         #main {
-            margin: 40px;
+            
         }
 
         .txt {
-            font-family: Sans-serif;
+            font-family: cursive;
+        }
+        h3{
+            font-family: cursive;
+            color:#ff7b54;
         }
         .edit{
             display: block;
     width: 80px;
     height: 25px;
-    background:#4257f5;
+    background:#ff971d;
     padding: 5px;
     text-align: center;
     border-radius: 5px;
     color: white;
     line-height: 25px;
     text-decoration: none;
+    box-shadow: 1px 1px 1px 1px;
         }
-     
+     #spec{
+         margin-top:20px;
+        background-color:#ff7b54;
+        padding: 10px 10px 10px 10px;
+     }
+     h2{
+         color:white;
+         font-weight: 10;
+     }
     </style>
 </head>
 
@@ -45,11 +58,11 @@
 <div class="topnav">
         <a  href="index.html">Home</a>
         <a href="upload.html">Upload</a>
-        <a class="active" href="#watch">Watch</a>
-        <a href="#about">About</a>
+        <a class="active" href="watch.php">Watch</a>
+        <a href="https://github.com/PiyushKhurana">Author</a>
       </div>
     <div id="main">
-        <div>
+        <div style="background-color:#ff971d;padding: 10px 10px 10px 10px;color:#ffffff;">
             <h1 class="txt">Video Encoding Challenge - RT Camp</h1>
         </div>
 
@@ -72,9 +85,9 @@
     
     
                 echo "<div>";
-                echo "<div id='headd'>";
+                echo "<div id='spec'>";
     
-                    echo "<h3 class='txt'>Video Title : $name</h3>";
+                    echo "<h2 class='txt'>Video Title : $name</h2>";
                     echo "<a class='edit' href='edit.php?id=".$id."'>Edit Video</a>";
     
                 echo "</div>";
@@ -102,9 +115,9 @@
     
     
                 echo "<div>";
-                echo "<div id='headd'>";
+                echo "<div id='spec'>";
     
-                    echo "<h3 class='txt'>Video Title : $name</h3>";
+                    echo "<h2 class='txt'>Video Title : $name</h2>";
                     echo "<a class='edit' href='edit.php?id=".$id."'>Edit Video</a>";
     
                 echo "</div>";
@@ -138,9 +151,9 @@
     
     
                 echo "<div>";
-                echo "<div id='headd'>";
+                echo "<div id='spec'>";
     
-                    echo "<h3 class='txt'>Video Title : $name</h3>";
+                    echo "<h2 class='txt'>Video Title : $name</h2>";
                     echo "<a class='edit' href='edit.php?id=".$id."'>Edit Video</a>";
     
                 echo "</div>";
@@ -169,9 +182,9 @@
     
     
                 echo "<div>";
-                echo "<div id='headd'>";
+                echo "<div id='spec'>";
     
-                    echo "<h3 class='txt'>Video Title : $name</h3>";
+                    echo "<h2 class='txt'>Video Title : $name</h2>";
                     echo "<a class='edit' href='edit.php?id=".$id."'>Edit Video</a>";
     
                 echo "</div>";
