@@ -24,7 +24,7 @@
         
         
 
-        header("Location: /rtcamp/watch.php");
+        header("Location: /watch.php");
         die();
         
 
