@@ -48,8 +48,8 @@
             ajax.send(formdata);
         }
         function progressHandler(event) {
-            var x=Math.trunc(event.loaded/1048576)
-            var y=Math.trunc(event.total/1048576)
+            var x=(event.loaded/1048576).toFixed(2);
+            var y=(event.total/1048576).toFixed(2);
             _("loaded_n_total").innerHTML = "Uploaded " + x + " MB of " + y+" MB";
             var percent = (event.loaded / event.total) * 100;
             _("progressBar").value = Math.round(percent);
