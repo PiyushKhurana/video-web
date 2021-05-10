@@ -13,16 +13,18 @@
                 if($rotate_value==90||$rotate_value==180||$rotate_value==270){
 
                         $query = "UPDATE videos set isModified=1 , rotate='$rotate_value'  where id='$id'";
+                        mysqli_query($con,$query);
                         
                 }
         }
         else {
                 $query = "UPDATE videos set isModified=1 , watermark='$watermark_text' , rotate='$rotate_value'  where id='$id'";
+                mysqli_query($con,$query);
         }
         
-        mysqli_query($con,$query);
+        
 
-        header("Location: /watch.php");
+        header("Location: /rtcamp/watch.php");
         die();
         
 

@@ -12,7 +12,7 @@ require 'vendor/autoload.php';
             'ffprobe.binaries' => $_ENV['FFPROBE_BIN_PATH'],
             'timeout'          => 3600, // The timeout for the underlying process
             'ffmpeg.threads'   => 12,   // The number of threads that FFMpeg should use
-        ), $logger);
+        ));
 
 
         $fetchVideos = mysqli_query($con, "SELECT * FROM videos Where isProcessed = 0 order by created asc ");
@@ -22,7 +22,7 @@ require 'vendor/autoload.php';
             $path_mp4=$row['location_mp4'];
 
 
-            $extra="/var/www/html/";
+            $extra="C://xampp//htdocs//rtcamp//";
             $video = $ffmpeg->open($extra.$path_mp4);
 
 

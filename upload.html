@@ -9,12 +9,23 @@
     <title>Upload</title>
     <style>
         #main {
-            margin: 40px;
+            font-family: cursive;
         }
 
         .txt {
-            font-family: Sans-serif;
+            font-family: cursive;
         }
+        input[type=file] {
+            font-family: cursive;
+        font-size: large;
+        margin-bottom: 3px;
+    
+}
+
+ input[type=button] {
+            font-family: cursive;
+        font-size: large;
+    }
     </style>
 
     <script>
@@ -23,6 +34,7 @@
             return document.getElementById(el);
         }
         function uploadFile() {
+            document.getElementById("loader").style.display = "block";
             var file = _("file1").files[0];
             // alert(file.name+" | "+file.size+" | "+file.type);
             var formdata = new FormData();
@@ -36,7 +48,9 @@
             ajax.send(formdata);
         }
         function progressHandler(event) {
-            _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
+            var x=Math.trunc(event.loaded/1048576)
+            var y=Math.trunc(event.total/1048576)
+            _("loaded_n_total").innerHTML = "Uploaded " + x + " MB of " + y+" MB";
             var percent = (event.loaded / event.total) * 100;
             _("progressBar").value = Math.round(percent);
             _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
@@ -44,6 +58,7 @@
         function completeHandler(event) {
             _("status").innerHTML = event.target.responseText;
             _("progressBar").value = 0;
+            document.getElementById("loader").style.display = "none";
         }
         function errorHandler(event) {
             _("status").innerHTML = "Upload Failed";
@@ -60,24 +75,28 @@
 <body>
     <div class="topnav">
         <a  href="index.html">Home</a>
-        <a class="active" href="#upload">Upload</a>
+        <a class="active" href="upload.html">Upload</a>
         <a href="watch.php">Watch</a>
-        <a href="#about">About</a>
+        <a href="https://github.com/PiyushKhurana">Author</a>
       </div>
     <div id="main" class="txt">
-        <div>
+        <div style="background-color:#ff971d;padding: 10px 10px 10px 10px;color:#ffffff;">
             <h1>Video Encoding Challenge - RT Camp</h1>
         </div>
 
-        <div>
+        <div style="background-color:#f55c47;padding: 40px 10px 10px 10px;color:#ffffff;margin-top: 20px;">
 
             <form id="upload_form" enctype="multipart/form-data" method="post">
                 <input type="file" name="file1" id="file1"><br>
                 <input type="button" value="Upload File" onclick="uploadFile()">
-                <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+                <progress id="progressBar" value="0" max="100" style="width:80%;"></progress>
                 <h3 id="status"></h3>
                 <p id="loaded_n_total"></p>
             </form>
+
+            <div>
+                <img src="Upload.gif" id="loader" style="display: none;"/>
+            </div>
 
         </div>
     </div>
