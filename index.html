@@ -30,11 +30,55 @@
     </div>
     
     <div class="" style="background-color:#f55c47;padding: 40px 10px 10px 10px;color:#ffffff;margin-top: 20px;">
-        <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <h2>
+            Features
+        </h2>
+        <p>
+            <h3>Upload: 📂</h3>
+<ul>
+<li>A User can upload video in any format.</li>
 
-        <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+<li>Since video uploading takes time the webapp will display percentage of file uploaded and actual file size uploaded in megaBytes (MB) along with a nice progressbar.</li>
+</ul>
+<h3>Watch:🎞️</h3>
 
-        <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+A User can watch the uploaded videos in three formats
+<ul>
+<li>mp4</li>
+<li>webm</li>
+<li>gif</li>
+</ul>
+<h3>Edit: ✂️</h3>
+
+After uploading the video , a user can also edit it. Following editing functionalities are provided:-
+<ul>
+<li>Text Watermark: A user can add a watermark to the video.</li>
+<li>Rotate: A user can rotate the video in three ways:
+90° ClockWise
+90° AntiClockWise
+180°</li>
+</ul>
+🛑 <em>Note: Editing will be done to only mp4 format of video due to limited cpu resources.
+</em> </p>
+
+        <p>
+            <h2>Challenges Faced 🙇</h2>
+<p>First Challenge I encounter was , the request timeout problem which was arising when I was doing processing just after uploading the video only. Similarly I was editing the video just after user submits the edit request . As processing takes time , the server could not give successful response within a stipulated time and it was often causing request timeout errors . I got to know this problem while I was trying to deploy on heroku where request timeout value is 30 sec and it is fixed , it can't be changed ❗ </p>
+
+<p><em>How I solved: ✅ Just when I was going through the heroku docs for changing the request timeout value , from there I came to know the concept of cron jobs which are similar to background processes and they can be configured to run periodically after certain time intervals. So I implemented this technique and created cron jobs which were php scripts only , each for post video uploading task and editing video task.</em></p>
+
+<p>Since I was processing videos in the background , I need to have a queueing system which will ensure that the video which gets uploaded first , or the video which gets request for edit first , will be processed first and also the videos which are supposed to be processed will only get processed , as not all videos require processing all the time . Since no external libraries can be used I have to think of a different approach ❗</p>
+
+<p><em>How I solved: ✅ Since I was already using database for storing file paths of video , I tried to implement a queue kind of functionality using database by using some special fields inside the table. Following are the fields and their significance :-</em></p>
+
+<p><ul><li><strong>isProcessed :</strong> To check whether video has been processed or not just after the upload. By default it is set to 0 , which means every video requires processing after upload. When the processing is done it is set to 1 indicating that it has done the mandatory after upload processing.</li>
+<li><strong>created :</strong> It is timestamp which is used to take decision of which file to be processed first , in case if there are many videos that requires processing.</li>
+<li> <strong>isModified :</strong> To check whether a video is requested for change. By default it is set to 0 which means no modifications require . When user initiates a request for edit , it's value is set to 1 indicating that there are some modifications to be done in this video .</li>
+<li><strong> updated :</strong> Similar to created timestamp , it is used to take decision of , in which file modifications to be done first , in case if there are many videos that requires modification.</li></ul></p>
+<p>Since there was a video editing functionality present in the webapp , each time when a video was edited , it's file name didn't changed . Since the file name was same , the file paths also remain the same , so google chrome was loading the file from its local cache only thinking that the file is same . So the modified video was not visible until I reopen the webapp in new tab or restart the browser ❗</p>
+
+<p><em>How I solved: ✅ While going through various stackoverflow discussions , I find a effective solution that will work irrespective of the browser and their caching methods. The idea was to add a query string with a timestamp value (Here I am using a random number instead of timestamp) to the source of video element , which will tricked the browser thinking that the video source has been changed , so it will load the video from server not from its local cache.</em></p>
+        </p>
     </div>
 </div>  
 </body>
