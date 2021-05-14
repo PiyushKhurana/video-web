@@ -19,27 +19,27 @@ require 'vendor/autoload.php';
         while($row = mysqli_fetch_assoc($fetchVideos)){
             $id=$row['id'];
             $name=$row['name'];
-            $path_mp4=$row['location_mp4'];
-
+            $video_location=$row['location'];
+            $video_format=substr($video_location, strrpos($video_location, '.') + 1);
             $watermark_text=$row['watermark'];
             $rotate_value=$row['rotate'];
 
 
             $extra=__DIR__.'/';
 
-            //$video = $ffmpeg->open($extra.$path_mp4);
-
+            //$video = $ffmpeg->open($extra.$video_location);
 
             
-            $path_new=$extra."videos/".$name."1".".mp4";
+            
+            $path_new=$extra."videos/".$name."1.".$video_format;
 
         
 
  
             if($rotate_value==90||$rotate_value==180||$rotate_value==270){
                 
-                $video = $ffmpeg->open($extra.$path_mp4);
-                  //$video = $ffmpeg->open($path_mp4);
+                $video = $ffmpeg->open($extra.$video_location);
+                  //$video = $ffmpeg->open($video_location);
                   
                   if($rotate_value==90){
                           $angle=FFMpeg\Filters\Video\RotateFilter::ROTATE_90;
@@ -55,8 +55,8 @@ require 'vendor/autoload.php';
                   $video->filters()->rotate($angle);
                   $video->save(new FFMpeg\Format\Video\X264(), $path_new);
   
-                  unlink($extra.$path_mp4);
-                  rename($path_new,$extra.$path_mp4);
+                  unlink($extra.$video_location);
+                  rename($path_new,$extra.$video_location);
                   
   
             }
@@ -64,15 +64,15 @@ require 'vendor/autoload.php';
   
             if(!empty($watermark_text)){
   
-                  $video = $ffmpeg->open($extra.$path_mp4);
+                  $video = $ffmpeg->open($extra.$video_location);
   
                   $command = "text='$watermark_text': fontfile='/var/www/html/Open_Sans/OpenSans-Regular.ttf': fontcolor=red: fontsize=80: box=1: boxcolor=black@0.5: boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/2:";
                   $video->filters()->custom("drawtext=$command");
                   
                   $video->save(new FFMpeg\Format\Video\X264(), $path_new);
   
-                  unlink($extra.$path_mp4);
-                  rename($path_new,$extra.$path_mp4);
+                  unlink($extra.$video_location);
+                  rename($path_new,$extra.$video_location);
   
            }
   

@@ -19,11 +19,11 @@ require 'vendor/autoload.php';
         while($row = mysqli_fetch_assoc($fetchVideos)){
             $id=$row['id'];
             $name=$row['name'];
-            $path_mp4=$row['location_mp4'];
+            $video_location=$row['location'];
 
 
             $extra=__DIR__.'/';
-            $video = $ffmpeg->open($extra.$path_mp4);
+            $video = $ffmpeg->open($extra.$video_location);
 
 
             

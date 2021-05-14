@@ -10,11 +10,11 @@ $val = $_GET["id"];
 $query_str="SELECT * FROM videos Where  id =".$val;
 $fetchVideos = mysqli_query($con, $query_str);
 $row = mysqli_fetch_assoc($fetchVideos);
-$path_mp4=$row['location_mp4'];
+$video_location=$row['location'];
 $path_jpg=$row['thumbnail'];
 
 $num = mt_rand(100000,999999); 
-$random_path=$path_mp4."?time".$num;
+$random_path=$video_location."?time".$num;
 
 
 

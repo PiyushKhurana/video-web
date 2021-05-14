@@ -2,6 +2,14 @@ vendor/
 *.mp4
 *.webm
 *.jpg
+*.mkv
+*.avi
+*.3gp
+*.mov
+*.mpeg
+*.wmv
+*.flv
+*.mpg
 *.gif
 !loader.gif
 !spinner.gif

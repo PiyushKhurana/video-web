@@ -79,10 +79,11 @@
            if($isProcessed==0&&$isModified==0){
 
             $name=$row['name'];
-                $path_mp4=$row['location_mp4'];
+                $video_location=$row['location'];
+                $video_format=strtoupper(substr($video_location, strrpos($video_location, '.') + 1));
                 $num = mt_rand(100000,999999); 
-                $random_path=$path_mp4."?time".$num;
-    
+                $random_path=$video_location."?time".$num;
+                
     
                 echo "<div>";
                 echo "<div id='spec'>";
@@ -93,7 +94,7 @@
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
-                echo "<h3>MP4 Format</h3>";
+                echo "<h3>$video_format Format</h3>";
                 echo "<video width='320' height='240' autoplay muted controls ><source src='".$random_path."' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
@@ -112,7 +113,8 @@
 
 
             $name=$row['name'];
-    
+            $video_location=$row['location'];
+                $video_format=strtoupper(substr($video_location, strrpos($video_location, '.') + 1));
     
                 echo "<div>";
                 echo "<div id='spec'>";
@@ -123,7 +125,7 @@
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
-                echo "<h3>MP4 Format</h3>";
+                echo "<h3>$video_format Format</h3>";
                 echo "<video width='320' height='240'  poster='spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
@@ -142,12 +144,13 @@
            }elseif($isProcessed==1&&$isModified==0){
 
             $name=$row['name'];
-                $path_mp4=$row['location_mp4'];
+                $video_location=$row['location'];
+                $video_format=strtoupper(substr($video_location, strrpos($video_location, '.') + 1));
                 $path_webm=$row['location_webm'];
                 $path_gif=$row['preview'];
                 $path_jpg=$row['thumbnail'];
                 $num = mt_rand(100000,999999); 
-                $random_path=$path_mp4."?time".$num;
+                $random_path=$video_location."?time".$num;
     
     
                 echo "<div>";
@@ -159,7 +162,7 @@
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
-                echo "<h3>MP4 Format</h3>";
+                echo "<h3>$video_format Format</h3>";
                 echo "<video width='320' height='240' autoplay muted controls ><source src='".$random_path."' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
@@ -177,6 +180,8 @@
            }else {
                
             $name=$row['name'];
+            $video_location=$row['location'];
+                $video_format=strtoupper(substr($video_location, strrpos($video_location, '.') + 1));
                 $path_webm=$row['location_webm'];
                 $path_gif=$row['preview'];
     
@@ -190,7 +195,7 @@
                 echo "</div>";
                 echo "<div >";
                 echo "<div id='row'>";
-                echo "<h3>MP4 Format</h3>";
+                echo "<h3>$video_format Format</h3>";
                 echo "<video width='320' height='240'  poster='spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
