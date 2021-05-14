@@ -98,11 +98,11 @@
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>WEBM Format</h3>";
-                echo "<video width='320' height='240'  poster='Spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240'  poster='spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>GIF Format</h3>";
-                echo "<video width='320' height='240' poster='Spinner.gif' style=' object-fit:none;' ><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240' poster='spinner.gif' style=' object-fit:none;' ><source src='' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
@@ -124,15 +124,15 @@
                 echo "<div >";
                 echo "<div id='row'>";
                 echo "<h3>MP4 Format</h3>";
-                echo "<video width='320' height='240'  poster='Spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240'  poster='spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>WEBM Format</h3>";
-                echo "<video width='320' height='240'  poster='Spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240'  poster='spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>GIF Format</h3>";
-                echo "<video width='320' height='240' poster='Spinner.gif' style=' object-fit:none;' ><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240' poster='spinner.gif' style=' object-fit:none;' ><source src='' type='video/mp4'></video>";
                 echo "</div>";
                     
                 echo "</div>";
@@ -191,7 +191,7 @@
                 echo "<div >";
                 echo "<div id='row'>";
                 echo "<h3>MP4 Format</h3>";
-                echo "<video width='320' height='240'  poster='Spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
+                echo "<video width='320' height='240'  poster='spinner.gif' style=' object-fit:none;'><source src='' type='video/mp4'></video>";
                 echo "</div>";
                 echo "<div id='row'>";
                 echo "<h3>WEBM Format</h3>";
