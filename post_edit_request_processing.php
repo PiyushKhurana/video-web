@@ -10,7 +10,7 @@ require 'vendor/autoload.php';
         $ffmpeg = FFMpeg\FFMpeg::create(array(
             'ffmpeg.binaries'  => $_ENV['FFMPEG_BIN_PATH'],
             'ffprobe.binaries' => $_ENV['FFPROBE_BIN_PATH'],
-            'timeout'          => 3600, // The timeout for the underlying process
+            'timeout'          => 0, // The timeout for the underlying process
             'ffmpeg.threads'   => 1,   // The number of threads that FFMpeg should use
         ));
 
