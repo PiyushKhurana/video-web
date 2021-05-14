@@ -11,7 +11,7 @@ require 'vendor/autoload.php';
             'ffmpeg.binaries'  => $_ENV['FFMPEG_BIN_PATH'],
             'ffprobe.binaries' => $_ENV['FFPROBE_BIN_PATH'],
             'timeout'          => 3600, // The timeout for the underlying process
-            'ffmpeg.threads'   => 12,   // The number of threads that FFMpeg should use
+            'ffmpeg.threads'   => 1,   // The number of threads that FFMpeg should use
         ));
 
 
@@ -66,7 +66,7 @@ require 'vendor/autoload.php';
   
                   $video = $ffmpeg->open($extra.$path_mp4);
   
-                  $command = "text='$watermark_text': fontfile=__DIR__.'/Open_Sans/OpenSans-Regular.ttf': fontcolor=red: fontsize=80: box=1: boxcolor=black@0.5: boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/2:";
+                  $command = "text='$watermark_text': fontfile='/var/www/html/Open_Sans/OpenSans-Regular.ttf': fontcolor=red: fontsize=80: box=1: boxcolor=black@0.5: boxborderw=5: x=(w-text_w)/2: y=(h-text_h)/2:";
                   $video->filters()->custom("drawtext=$command");
                   
                   $video->save(new FFMpeg\Format\Video\X264(), $path_new);
