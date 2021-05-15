@@ -1,4 +1,4 @@
-# Video Encoding Web App
+# Video Encoder/Transcoder Web App
 
 A web application for uploading , watching and editing the videos 🎬
 
