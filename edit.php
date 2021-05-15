@@ -35,7 +35,7 @@ $random_path=$video_location."?time".$num;
         }
 
         .txt {
-            font-family: cursive;
+            font-family: sans-serif;
         }
         #role{
             /* border: 3px;

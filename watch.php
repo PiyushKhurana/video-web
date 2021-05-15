@@ -23,10 +23,10 @@
         }
 
         .txt {
-            font-family: cursive;
+            font-family: sans-serif;
         }
         h3{
-            font-family: cursive;
+            font-family: sans-serif;
             color:#ff7b54;
         }
         .edit{
