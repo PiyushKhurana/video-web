@@ -59,7 +59,7 @@ $random_path=$video_location."?time".$num;
             text-align: center;
             background-color:#f55c47;
             padding: 10px 10px 10px 10px;
-            color:#ffffff;
+        
             
 
         }
@@ -109,13 +109,13 @@ $random_path=$video_location."?time".$num;
 
                             <div id="main">
 
-                                <div style="background-color:#ff971d;padding: 10px 10px 10px 10px;color:#ffffff;">
+                                <div style="background-color:#ff971d;padding: 10px 10px 10px 10px;">
                                     <h1 class="txt">Video Encoding Challenge - RT Camp</h1>
                                 </div>
 
 
-                                <div id="role" style="background-color:#ff7b54;padding: 10px 10px 10px 10px;color:#ffffff;">
-                                    <h2 class="txt" style="color:#ffffff;">Video Editor</h2>
+                                <div id="role" style="background-color:#ff7b54;padding: 10px 10px 10px 10px;">
+                                    <h2 class="txt" style="">Video Editor</h2>
                                 </div>
 
 
@@ -126,7 +126,7 @@ $random_path=$video_location."?time".$num;
                                     </video>
                                 </div>
 
-                                <div id="adv" style="color:#ffffff;font-weight:bold;">
+                                <div id="adv" style="font-weight:bold;">
                                                 
                                     <form id="myform" action='<?php echo "changes.php/?id=".$val;?>' method="post">
                                     <label for="watermark">Watermark:</label>

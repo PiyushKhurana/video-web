@@ -27,7 +27,7 @@
         }
         h3{
             font-family: sans-serif;
-            color:#ff7b54;
+            
         }
         .edit{
             display: block;
@@ -37,7 +37,7 @@
     padding: 5px;
     text-align: center;
     border-radius: 5px;
-    color: white;
+    color:black;
     line-height: 25px;
     text-decoration: none;
     box-shadow: 1px 1px 1px 1px;
@@ -48,7 +48,7 @@
         padding: 10px 10px 10px 10px;
      }
      h2{
-         color:white;
+        
          font-weight: 10;
      }
     </style>
@@ -62,7 +62,7 @@
         <a href="https://github.com/PiyushKhurana">Author</a>
       </div>
     <div id="main">
-        <div style="background-color:#ff971d;padding: 10px 10px 10px 10px;color:#ffffff;">
+        <div style="background-color:#ff971d;padding: 10px 10px 10px 10px;">
             <h1 class="txt">Video Encoding Challenge - RT Camp</h1>
         </div>
 
