@@ -41,7 +41,7 @@ A web application for uploading , watching and editing the videos 🎬
 **Watch**:🎞️
 
 A User can watch the uploaded videos in three formats
-  * mp4
+  * The original format ***(Not all video formats are supported by browsers)*** ❌
   * webm
   * gif
 
@@ -58,7 +58,7 @@ After uploading the video , a user can also edit it. Following editing functiona
   * 90° AntiClockWise
   * 180° 
 
-🛑 <em>Note: Editing will be done to only mp4 format of video due to limited cpu resources.</em>
+🛑 <em>Note: Modifications will be done only to the original format of video , due to limited cpu resources.</em>
 
 <img src="doc-img/edit.gif"  width="852" height="480"/>
 
@@ -265,7 +265,7 @@ mysql>use demo;
 mysql>CREATE TABLE videos (
       id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
       name varchar(255) NOT NULL,
-      location_mp4 varchar(255) NOT NULL,
+      location varchar(255) NOT NULL,
       location_webm varchar(255) ,
       preview varchar(255) ,
       thumbnail varchar(255) ,
