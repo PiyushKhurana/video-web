@@ -63,7 +63,7 @@
       </div>
     <div id="main">
         <div style="background-color:#ff971d;padding: 10px 10px 10px 10px;">
-            <h1 class="txt">Video Encoding Challenge - RT Camp</h1>
+            <h1 class="txt">Video Encoding Web App</h1>
         </div>
 
 

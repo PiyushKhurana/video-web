@@ -79,7 +79,7 @@ require 'vendor/autoload.php';
   
   
   
-        //   header("Location: /rtcamp/watch.php");
+        //   header("Location: /myvideoapp/watch.php");
         //   die();
           
 

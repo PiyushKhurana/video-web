@@ -1,4 +1,4 @@
-# Video Encoding Challenge - RT Camp
+# Video Encoding Web App
 
 A web application for uploading , watching and editing the videos 🎬
 
@@ -34,7 +34,7 @@ A web application for uploading , watching and editing the videos 🎬
 
 * Since video uploading takes time the webapp will display  percentage of file uploaded and actual file size uploaded in megaBytes (MB) along with a nice progressbar.
 
-<img src="doc-img/upload_md.gif"  width="852" height="480"/>
+
 
 &nbsp;
 
@@ -45,7 +45,7 @@ A User can watch the uploaded videos in three formats
   * webm
   * gif
 
-<img src="doc-img/watch.gif"  width="852" height="480"/>
+
 
 &nbsp;
 
@@ -60,7 +60,7 @@ After uploading the video , a user can also edit it. Following editing functiona
 
 🛑 <em>Note: Modifications will be done only to the original format of video , due to limited cpu resources.</em>
 
-<img src="doc-img/edit.gif"  width="852" height="480"/>
+
 
 &nbsp;
 
@@ -292,7 +292,7 @@ mysql>CREATE TABLE videos (
 
     * Clone the repository
         ```sh
-        git clone https://github.com/rtlearn/web-PiyushKhurana.git
+        git clone https://github.com/PiyushKhurana/video-web.git
         ```
     * Set the path for `ffmpeg` and `ffprobe` binaries in `post_upload_processing.php` and `post_edit_request_processing.php`.
     * Change maximum file size upload limit in `php.ini` to 50MB 
@@ -334,7 +334,7 @@ mysql>CREATE TABLE videos (
         ```
     * Clone the repository
         ```sh
-        git clone https://github.com/rtlearn/web-PiyushKhurana.git
+        git clone https://github.com/PiyushKhurana/video-web.git
         ```
     * install dependencies using composer
         ```sh
@@ -347,7 +347,7 @@ mysql>CREATE TABLE videos (
         
         * Create a `script.bat` file and put the path to php executable followed by the php script.
         ```sh
-        "C:\xampp\php\php.exe" -f "C:\xampp\htdocs\rtcamp\post_upload_processing.php"
+        "C:\xampp\php\php.exe" -f "C:\xampp\htdocs\myvideoapp\post_upload_processing.php"
         ```
         * Create a `shellscript.vbs` file and put following commands in it along with the path to `script.bat` file. 
         ```sh
@@ -370,7 +370,7 @@ mysql>CREATE TABLE videos (
 
 ## Future 🎯
 
-See the [open issues](https://github.com/rtlearn/web-PiyushKhurana/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/PiyushKhurana/video-web/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
